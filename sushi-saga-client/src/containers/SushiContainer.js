@@ -6,7 +6,7 @@ const SushiContainer = (props) => {
   return (
     <Fragment>
       <div className="belt">
-        { props.sushi.map((sushi)=> {
+        { props.sushis.map((sushi)=> {
           return <Sushi sushi={sushi}
           key={sushi.id}
           eat={props.eat}
