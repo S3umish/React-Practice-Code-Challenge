@@ -39,15 +39,24 @@ class App extends Component {
     return this.state.sushis.slice(this.state.displayIndex, this.state.displayIndex+4)
   }
 
-  // more = (event) => 
-  //   let newDisplayIndex = this.state.displayIndex + 4
+  more = (event) => {
+    let newDisplayIndex = this.state.displayIndex + 4
 
-    // if (newDisplayIndex >= this.state.sushis.length){
-    //   newDisplayIndex = 0
-    // }
-    // this.setState({
-    //   displayIndex: newDisplayIndex
-    // })
+    if (newDisplayIndex >= this.state.sushis.length){
+      newDisplayIndex = 0
+    }
+    this.setState({
+      displayIndex: newDisplayIndex
+    })
+  }
+
+  // addMoney =(event)=> {
+  //   event.preventDefault()
+  //   let addedMoney = parseInt(event.currentTarget.children[0].value)
+  //   if(!addedMoney){addedMoney = 0}
+  //   this.setState({
+  //     money: this.state.money + addedMoney
+  //   })
   // }
 
   render() {
